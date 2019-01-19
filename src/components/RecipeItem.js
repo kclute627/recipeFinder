@@ -5,17 +5,40 @@ import { favoriteRecipe } from '../actions/index';
 
 class RecipeItem extends Component {
 
+    state ={
+        favorite: false
+    }
+
+   favorite = (recipe)=>{
+        this.props.favoriteRecipe(recipe);
+        this.setState({favorite: true})
+    }
+
     render(){
 
         let { recipe }= this.props;
 
         return(
             <div className = 'recipe-item'>
-            <div 
-            onClick={()=>this.props.favoriteRecipe(recipe)}
-            className= 'star'>
-                &#9734;
-            </div>
+            {
+                this.props.favBtn ?
+                
+                    this.state.favorite ? 
+                    <div className="star1">&#9733;</div>
+                    :
+                    <div 
+                        onClick={()=>this.favorite(recipe)}
+                        className= 'star'>
+                        &#9734;
+                    </div>
+    
+                
+                :
+                <div></div>
+
+            }
+            
+            
             <div className='recipe-text' >
                 <a href={recipe.href}>
                 <h4>{recipe.title}</h4>

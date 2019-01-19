@@ -33,3 +33,15 @@ body {
     font-size: 40px;
     margin-right: 20px;
 }
+.star1{
+    cursor: pointer;
+    font-size: 40px;
+    margin-right: 20px;
+    color: rgba(22, 150, 0, 0.835)
+}
+.link{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    
+}

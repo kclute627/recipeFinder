@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchRecipes from './SearchRecipes';
-import RecipeList from './RecipeList'
+import RecipeList from './RecipeList';
+import { Link } from 'react-router-dom';
 import '../style/index.css';
 
 
@@ -19,6 +20,7 @@ class App extends Component {
                 <SearchRecipes />
                 <RecipeList />
                 
+
 
             </div>
             
